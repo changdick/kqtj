@@ -116,6 +116,24 @@ class Solution:
 #### 3 Floyd-Warshall 算法
 
 #### 4 最大流问题 Ford-Fulkerson算法
-
-
+画图，余图，找增广路径，更新流，画余图，找增广路径，更新流，循环直到余图中没有增广路径，那么已经找到最大流。
 #### 5 二部图最大匹配问题 匈牙利算法
+匈牙利算法是基于交替路径、增广路径完成的。交替路径是指二部图中，匹配边、非匹配边交替的路径。而可增广的路径是指一条交替路径，如果最两端都是非匹配边，那么可增广。把这条路径中的匹配变非匹配边，非匹配边变匹配边，那么会多出来一个匹配。  
+找最大匹配，只需找增广路径，取反增加匹配数，再找增广路径，再取反增加匹配数。一直到找不出来匹配边的增广路径，那么就找到了最大匹配。  
+这是作业题，用dfs策略，执行匈牙利算法。
+```python
+    # 下面是在图中使用匈牙利算法
+    def dfs( u ,visited):
+        for v in dictionary[u]:
+            if v not in visited:
+                visited.add(v)
+                if match[v] == -1 or dfs( match[v] , visited)
+                    match[v] = u
+                    return True
+        return False
+
+    for i in range(n):
+        visited = set()
+        dfs(i , visited)
+
+```
