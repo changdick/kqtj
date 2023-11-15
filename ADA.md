@@ -55,6 +55,57 @@ KMP算法的代码
                 nextchar[i] = k
 ```
 手算前缀表的过程，还是按照数据结构课整理的方法，求`next[i]`找前i个，一般是`pattern[0:i-1]`,肉眼观察出最大相同前后缀。
+
+带注释完整代码
+```python
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        # 先做好计算前缀表的函数
+        def getnext(pattern):
+            # 生成列表 ,下标1到n-1会用到查表，所以下标覆盖1到n-1即可
+            n = len(pattern)
+            Pi = [0 for _ in range(n)]
+            # 用双探头来写，一个找位置，一个写入
+            # 用i写入，由于写的是1到n-1范围，且每次i++完写入，因此i从0到n-2
+            i = 0
+            j = -1
+            Pi[0] = -1
+            while (i < n - 1):
+                if j == -1 or pattern[i] == pattern[j]:
+                    i += 1
+                    j += 1
+                    Pi[i] = j
+                else:
+                    j = Pi[j]
+            return Pi
+
+            
+        Pi = getnext(needle)
+        k = 0
+        index = -1
+        # 用for语句写,读主串的每一个字符
+        n = len(haystack)
+        m = len(needle)
+        for i in range(n):
+            # 后写这个：状态k > 0发生不匹配的时候，查前缀表更新状态
+            while k > 0 and haystack[i] != needle[k]:
+                k = Pi[k]
+            # 先写这两句：当匹配上，状态更新成下一个，检查是否匹配完毕
+            if haystack[i] == needle[k]:
+                k += 1
+            if k == m:
+        # 写返回 , 当前i在最后一个（对应m-1），但是k也就是匹配状态已经超过了最后一个，k是m，所以i-(m-1)不用管k
+        # 可以先让index = -1 ，匹配完成再更新成i-m+1 , 省的条件判断
+                index = i - m + 1
+                break
+
+       
+        return  index
+            
+```
+
+
+
 #### 5 BMH逆向朴素匹配算法
 此算法是模式串正向移动，每次逆向比较，发生不配对时，设主串上本次匹配段的最后一个字符是α，如果模式串的0到m-2段落（就是除了最后一个以外）有出现α，把最右边那个α直接移过去和主串上那个α对齐，然后下一轮匹配。为了方便高速移位，这是借助提前算好的偏移表完成。计算有一个公式。  
 当`pattern[0:m-2]`出现了α，那么向右偏移量`shift[α]`等于模式串最后一个坐标m-1,减去最右侧出现的α的坐标。否则，直接偏移m，即模式串长度。
