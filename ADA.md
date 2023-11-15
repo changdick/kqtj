@@ -123,6 +123,7 @@ class Solution:
 ```
 就求好了，时间复杂度O(|E|)
 #### 2 Dijkstra 算法
+[leetcode上的链接](https://leetcode.cn/problems/network-delay-time/submissions/)
 #### 3 Floyd-Warshall 算法
 
 #### 4 最大流问题 Ford-Fulkerson算法
