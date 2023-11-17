@@ -151,8 +151,8 @@ Exctract-min操作调用了多少次？显然是|V|次。  （上面伪代码的
 
 #### 3 Floyd-Warshall 算法
 [跳转](https://github.com/changdick/23Springsjjgsydm/blob/main/3%20%E9%87%8D%E8%A6%81%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86.md#8-floyd-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95)  
-可能考每一步的dp矩阵
-
+可能考每一步的dp矩阵  
+在写每一步的矩阵时，把上标k标上，如 $D^1,D^2,D^3,D^4...$，上标就是k，每次中间去绕这个点。
 
 #### 4 最大流问题 Ford-Fulkerson算法
 画图，余图，找增广路径，更新流，画余图，找增广路径，更新流，循环直到余图中没有增广路径，那么已经找到最大流。
