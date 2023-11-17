@@ -124,6 +124,17 @@ class Solution:
 就求好了，时间复杂度O(|E|)
 #### 2 Dijkstra 算法
 [leetcode上的链接](https://leetcode.cn/problems/network-delay-time/submissions/)
+```
+点分为两个集合，一个集合A表明已经确定了最小距离的点，一个集合B是尚未确定最小距离的点，初始化所有点在B中(上面的实现使用Bool数组来标记是否在A中)
+初始化所有点的最小距离估计为无穷大。（上面的实现使用数组d[n]完成，实际上是把所有点的d做成一个优先级队列，这里就是Insert操作）
+把源点的d设置为0
+进入n次的循环：
+        用优先级队列选出最小d是哪个节点  （上面的实现基于线性数组，就当作是O(n)复杂度的优先级队列 ， 此外应该用二叉堆、斐波那契堆来做，这里就是Extact-min操作）
+        把这个点加入到集合A中  （上面实现就是把这个点对应的Bool数组元素改成True）
+        松弛这个点u的所有出边(u,v)，如果有做松弛，应该把v的prev设置成这个u    （这就是对应优先级队列的Decrease-key操作）
+返回d[target](就是目标节点target的最短路径值了)
+       
+```
 #### 3 Floyd-Warshall 算法
 
 #### 4 最大流问题 Ford-Fulkerson算法
