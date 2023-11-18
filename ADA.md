@@ -176,3 +176,28 @@ Exctract-min操作调用了多少次？显然是|V|次。  （上面伪代码的
         dfs(i , visited)
 
 ```
+
+## 第三章 分治策略
+#### 1 快速排序
+快速排序是分治策略，每次分成子问题，然后处理子问题，类似于先序遍历二叉树。  
+下面是伪代码，partition函数用的是课本中的思路
+```
+quicksort(A,p,r)
+if p < r
+        q = partition(A,p,r)
+        quicksort(A,p,q-1)
+        quicksort(A,q+1,r)
+
+partition(A,p,r)
+        pivot = A[r]
+        j = p - 1
+        for i = p to r-1
+                if A[i] < pivot
+                        j = j + 1
+                        swap(A[i] , A[j])
+        swap(A[j+1] , A[r])
+        return j+1
+```
+#### 2 归并排序
+
+#### 3 选择顺序统计量
