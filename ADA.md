@@ -206,3 +206,14 @@ partition(A,p,r)
 用动态规划算法的问题特征： 最优化问题。  
 适用动态规划需满足： 最优子结构性质，子问题重叠。  
 做题关键：找出一种好的优化解的**定义**，这种定义有最优子结构性质，方便自底向上计算。  
+
+做动态规划的题目，关键在于找出一种最优解的定义，分解子问题写出状态转移方程。只要写出了状态转移方程，让计算机自底向上计算就没有难度了。
+
+> 编程题目足迹
+> [322零钱兑换](https://leetcode.cn/problems/coin-change/)  
+> [300最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/)  
+> [53最大子数组和](https://leetcode.cn/problems/maximum-subarray/description/)  
+> [198打家劫舍](https://leetcode.cn/problems/house-robber/)
+> [213打家劫舍2 作业题](https://leetcode.cn/problems/house-robber-ii/description/)
+> [64最小路径和](https://leetcode.cn/problems/minimum-path-sum/description/)
+> 
