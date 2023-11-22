@@ -219,4 +219,6 @@ partition(A,p,r)
 > [编辑距离](https://leetcode.cn/problems/edit-distance/)  
 > [最长公共子序列LCS问题](https://leetcode.cn/problems/longest-common-subsequence/)
 
-
+#### 1 矩阵乘法问题
+问题：矩阵 $A_1, A_2, ... , A_n$ ,用什么顺序计算 $A_1A_2...A_n$,代价最小。 
+最优解定义和状态转移方程： 定义m[i,j]为 $A_iA_{i+1}...A_j$的最小代价，p[i]为矩阵 $A_i$的列数，那么m[i,j] = m[i,k]+m[k+1,j]+p[i-1]p[k]p[j]，其中k是遍历所有满足 $i \leq k < j$。 
