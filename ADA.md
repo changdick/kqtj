@@ -202,6 +202,23 @@ partition(A,p,r)
 
 #### 3 选择顺序统计量
 
+#### 4 二分查找的标准写法
+```python
+    def search(nums: List[int], target: int) -> int:
+        left = 0
+        right = len(nums) - 1
+        while(left <= right):
+            mid = (left + right) // 2
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] > target:
+                right = mid - 1
+            elif nums[mid] < target:
+                left = mid + 1
+        return -1
+# 区间用闭区间， 闭区间就得用小于等于号控制条件 ， 分三个条件判断， mid加减1.
+```
+
 ## 第四章 动态规划
 用动态规划算法的问题特征： 最优化问题。  
 适用动态规划需满足： 最优子结构性质，子问题重叠。  
