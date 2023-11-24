@@ -301,4 +301,4 @@ A\*算法是做一个更好的评估函数，即考虑过去带来的影响，�
 动态表的插入和删除，一共有八种情况，在动态表执行任意n个操作的实际运行时间是O(n).  
 $\alpha\geq\frac{1}{2}$时插入，不扩张， $c_i=1,\Phi(D_i)-\Phi(D_{i-1})=(2T_i.num-T.size)-(2T_{i-1}.num-T.size)=2,c_i^{\prime}=c_i+2=3$   
 $\alpha\geq\frac{1}{2}$时插入，扩张, 这里隐含着的等式有 $T_{i-1}.num=T_{i-1}.size,T_{i}.size=2T_{i-1}.size$, 先把元素拷贝到新表，再添加一个元素， $c_i=T_{i-1}.size+1,\Phi(D_i)-\Phi(D_{i-1})=(2T_i.num-T_i.size)-(2T_{i-1}.num-T_{i-1}.size)=2-T_{i-1}.size,c_i^{\prime}=c_i+2-T_{i-1}.size=3$    
-$\alpha_{i-1}<\frac{1}{2}$时插入,并且 $alpha_{i}\geq\frac{1}{2}$时，这里隐含的等式 $T_i.num=T_{i-1}.num+1$,T.size是一样的，并且要用到 $\alpha_{i-1}=\frac{num}{size}<\frac{1}{2}$这样 $c_i=1,\Phi(D_i)-\Phi(D_{i-1})=(2T_i.num-T_i.size)-(\frac{1}{2}T_{i-1}.size-T_{i-1}.num)=3T_{i-1}.num+2-\frac{3}{2}T.size<\frac{3}{2}T.size+2-\frac{3}{2}T.size=2,c_i^{\prime}<c_i+2=3$.
+$\alpha_{i-1}<\frac{1}{2}$时插入,并且 $alpha_{i}\geq\frac{1}{2}$时，这里隐含的等式 $T_i.num=T_{i-1}.num+1$,T.size是一样的，并且要用到 $\alpha_{i-1}=\frac{num}{size}<\frac{1}{2}$ .这样  $c_i=1,\Phi(D_i)-\Phi(D_{i-1})=(2T_i.num-T_i.size)-(\frac{1}{2}T_{i-1}.size-T_{i-1}.num)=3T_{i-1}.num+2-\frac{3}{2}T.size<\frac{3}{2}T.size+2-\frac{3}{2}T.size=2,c_i^{\prime}<c_i+2=3$.
