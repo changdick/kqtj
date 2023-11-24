@@ -313,4 +313,4 @@ $\alpha<\frac{1}{2}$时删除，导致了收缩，那么隐含的等式有 $2T_i
 
 $\alpha_i\geq\frac{1}{2}$,删除，这种情况$c_i=1,\Phi(D_i)-\Phi(D_{i-1})=2T_i.num-T_i.size-2T_{i-1}.num-T_{i-1}.size=-2 , c_i'=c_i-2=-1$ 
 
-$\alpha_{i-1}>\frac{1}{2}, alpha_i<\frac{1}{2}$,删除, $c_i=1,\Phi(D_i)-\Phi(D_{i-1})=\frac{1}{2}T_i.size-T_i.num-2T_{i-1}.num+T_i-1.size=\frac{3}{2}T_i.size-3T_{i-1}.num+1<1,c_i'<c_i+1=2$
+$\alpha_{i-1}>\frac{1}{2}, alpha_i<\frac{1}{2}$,删除, $c_i=1,\Phi(D_i)-\Phi(D_{i-1})=\frac{1}{2}T_i.size-T_i.num-2T_{i-1}.num+T_i-1.size=\frac{3}{2}T_i.size-3T_{i-1}.num+1<1,c_i'<c_i+1=2$  
