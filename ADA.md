@@ -290,4 +290,5 @@ A\*算法是做一个更好的评估函数，即考虑过去带来的影响，�
 势能法：先定义势能函数，保证势能函数非负，然后用公式求平摊代价。  
 #### 实例分析
 栈操作势能函数：栈中的元素个数。二进制计数器的势能函数：'1'的个数。  
-表的扩张与收缩的势能函数： 设表为T, T.num为表中已经装填的元素个数， T.size为表的大小，α为装填因子。那么势能函数是 $$\Phi(D)=\begin{cases}2\mathrm{T.num-T.size}& alpha\geq\frac{1}{2}\\\frac{T.size}{2}-\mathrm{T.num} &\frac{1}{4}<\alpha<\frac{1}{2}\end{cases}$$ 
+表的扩张与收缩的势能函数： 设表为T, T.num为表中已经装填的元素个数， T.size为表的大小，α为装填因子。那么势能函数是 
+$$\Phi(D)=\begin{cases}2\mathrm{T.num-T.size}& alpha\geq\frac{1}{2}\\\frac{T.size}{2}-\mathrm{T.num} &\frac{1}{4}<\alpha<\frac{1}{2}\end{cases}$$ 
