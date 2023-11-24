@@ -307,4 +307,6 @@ $\alpha_{i-1}<\frac{1}{2}$时插入,并且 $alpha_{i}\geq\frac{1}{2}$时，这�
 
 $\alpha_{i-1}<\frac{1}{2}$时插入,并且 $alpha_{i}<\frac{1}{2}$时, $c_i=1,\Phi(D_i)-\Phi(D_{i-1})=(\frac{1}{2}T_i.size-T_i.num)-(\frac{1}{2}T_{i-1}.size-T_{i-1}.num) = -1, c_i'=c_i+1=0$.   
 
-$\alpha<\frac{1}{2}$时删除，不收缩， $$
+$\alpha<\frac{1}{2}$时删除，不收缩， $c_i = 1, \Phi(D_i)-\Phi(D_{i-1})=(\frac{1}{2}T_i.size-T_i.num) -(\frac{1}{2}T_{i-1}.size-T_{i-1}.num)=1,c_i'=c_i+1=2$
+
+$\alpha<\frac{1}{2}$时删除，导致了收缩，那么隐含的等式有 $2T_i.size = T_{i-1}.size, c_i=T_i.num=T_{i-1}.num-1,T_i.size=2T_{i-1}.num$,计算代价， $\Phi(D_i)-\Phi(D_{i-1})=(\frac{1}{2}T_i.size-T_i.num) -(\frac{1}{2}T_{i-1}.size-T_{i-1}.num)=-\frac{1}{2}T_i.size+1,c_i=\frac{1}{2}T_i.size,c_i'=1$
