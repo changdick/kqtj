@@ -250,6 +250,13 @@ partition(A,p,r)
 #### 4 最优二叉搜索树
 
 ## 第五章 贪心算法
+刷题足迹
+> [455分发饼干 深圳18，19级考题](https://leetcode.cn/problems/assign-cookies/)  
+> [134加油站 本部19年考题](https://leetcode.cn/problems/gas-station/)
+> [55跳跃游戏](https://leetcode.cn/problems/jump-game/)  
+> [45跳跃游戏II 作业题](https://leetcode.cn/problems/jump-game-ii/)
+
+
 #### 1 活动安排问题
 #### 2 Huffman编码
 #### 3 最小生成树算法
